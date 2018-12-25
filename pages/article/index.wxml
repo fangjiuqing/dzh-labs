@@ -1,0 +1,48 @@
+<!-- index.wxml -->
+<view class="bg">
+    <view class="content_container">
+        <!--等待框-->
+        <loading hidden="{{!loading}}">加载中...</loading>
+        <scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view class="page-title">
+            <text>{{ page_title }}</text>
+            <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+              <!--  display: inline-block-->
+              <view wx:for="{{data_list.years}}" wx:key="key" style="display:inline">
+                <block>
+                  <image class="nav-sep" src="https://www.dzh-labs.com/m/needs/18.gif"></image>
+                  
+                  <navigator class="article-year" url="/pages/article/index?year={{item.id}}" open-type="redirect" hover-class="article-year-hover">{{ item.name }}</navigator> 
+                  
+                </block>
+              </view>
+            </scroll-view>
+          </view>
+
+          <view class="page_body page-body">
+            <view wx:if="{{data_list.articles}}">
+              <block wx:for="{{data_list.articles}}" wx:key="key">
+                <view class="article-item">
+                  <rich-text class="article-title" nodes="{{ item.title }}"></rich-text>
+                  <text class="article-time">{{ item.time }}</text>
+                  <rich-text class="article-content" nodes="{{ item.content }}"></rich-text>
+                </view>
+              </block>
+            </view>
+            <view wx:else class="no-data">
+            暂无{{page_title}}发布
+            </view>
+
+            <!-- pages start -->
+            <view class="pages">
+              <view class="page-item" data-page="{{page-1}}" bindtap="pageto" wx:if="{{page > 1}}">上一页</view>
+                <block wx:for="{{pages}}" wx:key="{{index}}">
+                  <view class="page-item {{ page == (index+1) ? 'page-item-active' : ''}}" data-page="{{index+1}}" bindtap="pageto">{{index + 1}}</view>
+                </block>
+              <view class="page-item" data-page="{{page+1}}" bindtap="pageto" wx:if="{{page < pages}}">下一页</view>
+            </view>
+            <!-- pages end -->
+          </view>
+        </scroll-view>
+    </view>
+</view>

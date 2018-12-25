@@ -1,0 +1,9 @@
+<view class="pages">
+  <view class="page-item" bindtap="pageto({{page-1}})" wx:if="{{page > 1}}">上一页</view>
+  <view class="page-item" wx:for="{{pages}}" wx:key="{{index}}">
+    <block>
+      <view class="page-item" bindtap="pageto({{index+1}})">{{index + 1}}</view>
+    </block>
+  </view>
+  <view class="page-item" bindtap="pageto({{page+1}})" wx:if="{{page < pages}}">下一页</view>
+</view>

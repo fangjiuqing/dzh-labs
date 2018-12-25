@@ -1,0 +1,69 @@
+<!-- index.wxml -->
+<view class="bg" style="{{color}}">
+    <!-- 头部导航 -->
+    <view class="header">
+        <scroll-view class="sv__container" scroll-x="true">
+            <block wx:for="{{categoryTabs}}" wx:key="lanmu_id" wx:if="{{ item.selected }}">
+                <view 
+                    class="sv__item {{ currentTab==item.lanmu_id ? 'active':'' }}" 
+                    bindtap="changeCategory" 
+                    data-id="{{ item.lanmu_id }}"
+                    data-custom="{{ item.lanmu_custom }}"
+                    data-cat="{{ item.lanmu_name }}"
+                    data-url="{{ item.lanmu_json }}"
+                >
+                    {{ item.lanmu_name }}
+                </view>
+            </block>
+        </scroll-view>
+        <image class="sv-manager" src="/image/more.png"></image>
+    </view>
+    <!-- 视频容器 -->
+    <view class="vedio_container">
+       <view class="video">
+         <txv-video vid="t0803mhev0m" playerid="txv1" autoplay="{{false}}" isNeedMutex="{{true}}" showCenterPlayBtn="{{true}}"></txv-video>
+      </view>
+    </view>
+
+    <!-- 公告栏 -->
+    <view class="board">
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+          <block wx:for="{{noticeList}}" wx:key="{{key}}">
+            <navigator url="{{item.website}}" open-type="navigate">
+            <swiper-item>
+               <view class="swiper_item">
+                  <rich-text nodes="{{item.title}}"></rich-text>
+                </view>
+               </swiper-item>
+             </navigator>
+           </block>
+       </swiper>
+    </view>
+    <include src="../common/template/footer.wxml"/>
+
+    <view class="view footer-view" hidden="{{showIntro}}" style="display:{{showIntro ? 'block' : 'none'}};">
+        <view class="view-cont">
+            <view class="p">
+                <text class="label">主理人：</text>
+                <text class="text">胡英鹏</text>
+            </view>
+            <view class="p">
+                <text class="label" space="ensp">电  话：</text>
+                <text class="text">15053371555</text>
+            </view>
+            <view class="p">
+                <text class="label" space='ensp'>地  址：</text>
+                <text class="text add">山东省淄博市桓台唐山镇</text>
+            </view>
+        </view>
+        <text class='after'></text>
+    </view>
+
+    <view class="view footer-view" hidden="{{showWechat}}" style="display:{{showWechat ? 'block' : 'none'}}; left:85%; width:140px; padding-right:7px; padding-top:4px">
+        <view class="view-cont">
+            <image src="http://www.dzh-labs.com/wechat.jpg" style='width:118px;height:118px'></image>
+        </view>
+        <text class='after' style='left:88%'></text>
+    </view>
+
+</view>

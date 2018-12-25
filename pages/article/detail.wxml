@@ -1,0 +1,19 @@
+<!-- index.wxml -->
+<view class="bg">
+    <view class="content_container">
+        <!--等待框-->
+        <loading hidden="{{!loading}}">加载中...</loading>
+        <view style="height:890rpx;">
+              <scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                <view class="page-title">
+                    <rich-text nodes="{{page_title}}"></rich-text>
+                </view>
+                <view class="page-body">
+                    <view class="detail-pidg">
+                      <rich-text nodes="{{detail_content}}"></rich-text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

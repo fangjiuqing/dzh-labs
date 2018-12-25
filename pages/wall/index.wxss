@@ -1,0 +1,4 @@
+/* pages/wall/index.wxss */
+.item .cover{
+  height: 75px;
+}

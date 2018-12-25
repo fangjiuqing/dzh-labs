@@ -1,0 +1,337 @@
+/**app.wxss**/
+.page {
+    min-height: 100%;
+    flex: 1;
+    background-color: #FBF9FE;
+    font-size: 14px;
+    
+    overflow: hidden;
+    line-height: 1.6;    
+    font-family: "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.active{
+  color:#d81e06;
+  border-bottom: 2rpx solid #d81e06;
+}
+
+
+
+/** global weui article **/
+
+.articles{
+  background-color: #fff;
+}
+.article__item{
+  display: flex;
+  padding: 30rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+  padding-bottom: 40rpx;
+}
+.article__thumb{
+  width:4.2rem;
+  height: 3rem;
+  margin-right: 0.6rem;
+}
+.article__image{
+  width:4.2rem;
+  height: 3rem;
+}
+.article__info{
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.article__title{
+  font-weight: 400;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  display: block;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+/* 支持多行 */
+.article__title__large{
+  
+}
+
+.article__desc{
+  color: #999;
+  font-size: 24rpx;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.article__item__cover{
+  display: block;
+}
+.article__cover{
+  padding-bottom: 10rpx;
+  overflow: hidden;
+}
+.article__ad{
+  width: 100%;
+  height: 4rem;
+  border-radius: 10rpx;
+}
+
+.article__remark{
+  bottom: 0;
+  width: 20rem;
+  display: block;
+  font-size: 28rpx;
+}
+
+.article__source{
+  color:#d81e06;
+  border:1rpx solid #d81e06;
+  padding: 2rpx 10rpx;
+  border-radius: 4rpx;
+  font-size:20rpx;
+  margin-right: 20rpx;
+}
+
+
+.article__time{
+  margin-right: 10rpx;
+}
+.article__count{
+  float: right;
+  display: flex;
+  align-items: center;
+  color:#333;
+  font-size: 20rpx;
+  font-weight: 500;
+}
+
+.article__icon{
+  width: 29rpx;
+  height: 29rpx;
+  margin-left: 15rpx;
+  margin-right: 6rpx;
+}
+
+.article__imgview{
+  width: 200rpx;
+  height: 142rpx;
+  padding: 15rpx;
+}
+
+/** 底部 **/
+.weui-footer {
+  background: url('https://www.dzh-labs.com/m/needs/opacity_bg.png');
+  color: #999999;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff;
+  padding: 10rpx; 
+}
+.weui-footer_fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.weui-footer__links {
+  font-size: 0;
+}
+.weui-footer__link {
+  display: inline-block;
+  width: 25%;
+  height: 66rpx;
+}
+
+.weui-footer__link:first-child:before {
+  display: none;
+}
+.weui-footer__text {
+  padding: 0 .34em;
+  font-size: 12px;
+}
+.link-index{
+  background: url('https://www.dzh-labs.com/m/needs/home_icon.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+.link-index-active{
+  background: url('https://www.dzh-labs.com/m/needs/home_icon_hover.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+
+.link-introduce{
+  background: url('https://www.dzh-labs.com/m/needs/introduce_icon.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+.link-intro-active{
+  background: url('https://www.dzh-labs.com/m/needs/introduce_icon_hover.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+
+.link-tell{
+  background: url('https://www.dzh-labs.com/m/needs/tell_icon.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+.link-tell-active{
+  background: url('https://www.dzh-labs.com/m/needs/tell_icon_hover.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+
+.link-wechat{
+  background: url('https://www.dzh-labs.com/m/needs/wechat_icon.png') no-repeat;
+  background-size: 46rpx;
+  background-position:center;
+}
+.link-wechat-active{
+  background: url('https://www.dzh-labs.com/m/needs/wechat_icon_hover.png') no-repeat;
+  background-size: 40rpx;
+  background-position:center;
+}
+
+
+
+/**index.wxss**/
+.bg {
+    background: url('https://www.dzh-labs.com/dzh-labs/static/images/page_bg.jpg') no-repeat;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display:flex; 
+    flex-direction:column;
+    background-size: 100% 100%;
+}
+
+.content_container {
+    flex-direction: row;
+    margin: 60rpx auto 30rpx;
+    overflow: hidden;
+    position: absolute;
+    top: 48rpx;
+    left: 50rpx;
+    right: 50rpx;
+    bottom: 70rpx;
+    border-radius: 20rpx;
+    background-image: url('https://www.dzh-labs.com/dzh-labs/static/images/opacity_bg.png');
+    padding: 20px 0px;
+}
+
+.page-title {
+  padding: 26rpx 20rpx;
+  margin: 0 0 30rpx 0;
+  font-size: 30rpx;
+  color: #8c3f00;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2rpx solid #d8763a;
+}
+.page-title text {
+  height:80rpx;
+  display:block;
+  overflow:hidden;
+}
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding:0rpx 20rpx;
+}
+.item {
+  display: flex;
+  padding: 20rpx 0rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.item .cover {
+  width: 100px;
+  height:88px;
+  margin-right:10px;
+}
+.item .poster {
+  width: 100%;
+  height: 100%;
+  /* width: 128rpx;
+  height: 128rpx; */
+  margin-right: 20rpx;
+}
+.item .meta {
+  flex: 1;
+}
+.item .meta .title,.item .meta .sub-title {
+  display: block;
+  margin-bottom: 15rpx;
+}
+.item .meta .title {
+  color: #8c3f00;
+  height: auto;
+  line-height: 40rpx;
+  margin: 0 0 10rpx 0;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.item .meta .sub-title {
+  color: #728087;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+
+.no-data{
+  font-size:28rpx;
+  color:rgb(128, 128, 128);
+  padding:0rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.tabbar_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 120rpx;
+    border-top: 1rpx solid gray; 
+}
+ 
+.tabbar_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    height: 100%;
+}
+ 
+.tabbar_icon{
+    width: 61rpx;
+    height: 61rpx;
+}
+
+/** 分页样式 **/
+.pages {
+  text-align: center;
+  overflow: hidden;
+}
+.page-item {
+  display: inline-block;
+  padding: 0 10px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 5px;
+  background: #dbd3c5;
+  font-size: 12px;
+  color: #756464;
+  margin-right: 10rpx;
+}
+.page-item-active{
+  background: #fff;
+}

@@ -1,0 +1,16 @@
+<view class="bg">
+    <view class="content_container">
+        <!--等待框-->
+        <loading hidden="{{!loading}}">加载中...</loading>
+        <view style="height:890rpx;">
+              <scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                <view class="page-title">
+                    <text>{{ page_title }}</text>
+                </view>
+                <view class="page-body">
+                  <txv-video vid="{{detail_content.tcode}}" playerid="txv1" autoplay="{{false}}"></txv-video>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

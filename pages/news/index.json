@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modal-cus": "/components/modal/modal",
+    "txv-video": "plugin://tencentvideo/video"
+  }
+}

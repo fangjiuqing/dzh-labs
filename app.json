@@ -1,0 +1,56 @@
+{
+    "pages": [
+        "pages/news/index",
+        "pages/article/index",
+        "pages/article/detail",
+        "pages/wall/index",
+        "pages/wall/view",
+        "pages/knowledge/index",
+        "pages/video/index",
+        "pages/video/view",
+        "pages/contacts/index",
+        "pages/dogs/index",
+        "pages/dogs/detail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#7ca0ec",
+        "navigationBarTitleText": "地中海犬舍",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBars": {
+        "position":"top",
+        "color": "#333",
+        "selectedColor": "#0171ff",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "list": [{
+            "pagePath": "pages/news/index",
+            "iconPath": "image/home_icon.png",
+            "selectedIconPath": "image/home_icon_hover.png",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/introduce/index",
+            "iconPath": "image/introduce_icon.png",
+            "selectedIconPath": "image/introduce_icon_hover.png",
+            "text": "介绍"
+        }, {
+            "pagePath": "pages/contact/index",
+            "iconPath": "image/tell_icon.png",
+            "selectedIconPath": "image/tell_icon_hover.png",
+            "text": "联络"
+        }, {
+            "pagePath": "pages/wechat/index",
+            "iconPath": "image/wechat_icon.png",
+            "selectedIconPath": "image/wechat_icon_hover.png",
+            "text": "微信"
+        }]
+    },
+    "debug":false,
+    "plugins": {
+      "tencentvideo": {
+        "version": "1.2.4",
+        "provider": "wxa75efa648b60994b"
+      }
+    }
+}

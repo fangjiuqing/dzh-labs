@@ -1,0 +1,13 @@
+<!-- index.wxml -->
+<view class="bg">
+    <view class="content_container">
+        <!--等待框-->
+        <loading hidden="{{!loading}}">加载中...</loading>
+        <scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view class="page-title">{{ page_title }}</view>
+            <view class="page-body">
+                <text class="no-data">暂无犬种知识发布</text>
+              </view>
+        </scroll-view>
+    </view>
+</view>

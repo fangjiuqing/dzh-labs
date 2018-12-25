@@ -1,0 +1,13 @@
+<view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__links">
+        <view bindtap="navToindex" class="weui-footer__link link-index {{indexActive == true ? 'link-index-active' : '' }}">首页</view>
+
+        <view bindtap='navTointro' class="weui-footer__link link-introduce {{introActive == true ? 'link-intro-active' : ''}}">
+          介绍
+        </view>
+        
+        <view bindtap='navTotell' class="weui-footer__link link-tell {{tellActive == true ? 'link-tell-active' : ''}}">联络</view>
+
+        <view bindtap='navTowechat' class="weui-footer__link link-wechat {{wechatActive == true ? 'link-wechat-active' : ''}}">微信</view>
+    </view>
+</view>

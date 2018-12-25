@@ -1,0 +1,29 @@
+/* pages/dogs/detail.wxss */
+@import "../../utils/wxParse/wxParse.wxss";
+.page-title {
+  border-bottom: 2rpx dashed #d8763a;
+  height: 97rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+
+.page-body {
+  font-size: 30rpx;
+  color: #353944;
+}
+
+.cols-tip {
+  width: 252rpx;
+  height: 82rpx;
+}
+.new-detail-item{
+    margin: 20rpx 0rpx;
+}
+.detail-key {
+  color: #8c3f00;
+}
+
+.space {
+  color: #ccc;
+  margin: 0 10rpx;
+}

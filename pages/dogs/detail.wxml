@@ -1,0 +1,91 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<!-- index.wxml -->
+<view class="bg">
+    <view class="content_container">
+        <!--等待框-->
+        <loading hidden="{{!loading}}">加载中...</loading>
+        <view style="height:940rpx;">
+              <scroll-view scroll-y style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                <view class="page-title">
+                    <text>{{ page_title }}</text>
+                </view>
+                <view class="page-body details-content">
+                    <view>
+                      <image class="cols-tip" src="https://www.dzh-labs.com/m/needs/photo.png"></image>
+                    </view>
+                    <view class="detail-item">
+                        <text class="detail-key" wx:if="{{dog_content.chinese}}">呼名：</text>
+                        <text class="detail-val" wx:if="{{dog_content.chinese}}">{{ dog_content.chinese}}</text>
+                        <text class="space" wx:if="{{dog_content.chinese}}">|</text>
+
+                        <text class="detail-key" wx:if="{{dog_content.english}}">英文登录名：</text>
+                        <text class="detail-val" wx:if="{{dog_content.english}}">{{ dog_content.english}}</text>
+                        <text class="space" wx:if="{{dog_content.english}}">|</text>
+                        <text class="detail-key" wx:if="{{dog_content.ifch}}">是否登录：</text>
+                        <text class="detail-val" wx:if="{{dog_content.ifch}}">{{ dog_content.ifch}}</text>
+                    </view>
+                    
+                    <view class="detail-item new-detail-item">
+                        <text class="detail-key" wx:if="{{dog_content.lite}}">荣誉头衔：</text>
+                        <text class="detail-val" wx:if="{{dog_content.lite}}">{{ dog_content.lite}}</text>
+                        <text class="space" wx:if="{{dog_content.lite}}">|</text>
+                        <text class="detail-key" wx:if="{{dog_content.father}}">父亲：</text>
+                        <text class="detail-val" wx:if="{{dog_content.father}}">{{ dog_content.father}}</text>
+                        <text class="space" wx:if="{{dog_content.father}}">|</text>
+                        <text class="detail-key" wx:if="{{dog_content.mother}}">母亲：</text>
+                        <text class="detail-val" wx:if="{{dog_content.mother}}">{{ dog_content.mother}}</text>
+                    </view>
+
+                    <view class="detail-item new-detail-item">
+                        <text class="detail-key" wx:if="{{dog_content.birthday}}">出生日期：</text>
+                        <text class="detail-val" wx:if="{{dog_content.birthday}}">{{ dog_content.birthday}}</text>
+                        <text class="space" wx:if="{{dog_content.birthday}}">|</text>
+                        <text class="detail-key" wx:if="{{dog_content.breeder}}">繁殖者：</text>
+                        <text class="detail-val" wx:if="{{dog_content.breeder}}">{{ dog_content.breeder}}</text>
+                        <text class="space" wx:if="{{dog_content.breeder}}">|</text>
+                        <text class="detail-key" wx:if="{{dog_content.owner}}">所有者：</text>
+                        <text class="detail-val" wx:if="{{dog_content.owner}}">{{ dog_content.owner}}</text>
+                        <text class="space" wx:if="{{dog_content.owner}}">|</text>
+                        <text class="detail-key" wx:if="{{dog_content.cku}}">血统号：</text>
+                        <text class="detail-val" wx:if="{{dog_content.cku}}">{{ dog_content.cku}}</text>
+                    </view>
+  
+                    <view>
+                      <rich-text wx:if="{{detail_cont}}" nodes="{{detail_cont}}"></rich-text>
+                    </view>
+
+                    <view wx:if="{{detail_pidg}}">
+                      <image class="cols-tip" src="https://www.dzh-labs.com/m/needs/pedigree.png"></image>
+                    </view>
+
+                    <!--table start-->
+                    <view  wx:if="{{detail_pidg}}" class="table-container">
+                    <rich-text nodes="{{detail_pidg}}"></rich-text>
+                    </view>
+                    <!--table end-->
+
+                    <!--prize start-->
+                    <view wx:if="{{detail_prize}}">
+                        <view>
+                          <image class="cols-tip" src="https://www.dzh-labs.com/m/needs/prize.png"></image>
+                        </view>
+
+                        <block wx:for="{{detail_prize}}" wx:key="id">
+                            <navigator url="../wall/view?id={{item.Id}}">
+                              <view class="item">
+                                <view class="cover" style="height:75px;">
+                                  <image class="poster" src="https://www.dzh-labs.com/{{item.picture}}"></image>
+                                </view>
+                                <view class="meta">
+                                  <text class="title">{{ item.title }}</text>
+                                </view>
+                              </view>
+                            </navigator>
+                        </block>
+                    </view>
+                    <!--prize end-->
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

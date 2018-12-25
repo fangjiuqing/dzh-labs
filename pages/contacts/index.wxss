@@ -1,0 +1,8 @@
+/* pages/contacts/index.wxss */
+.page-body{
+  overflow: hidden;
+  line-height: 48rpx;
+  font-size: 30rpx;
+  color: #353944;
+  padding:0rpx 30rpx;
+}
