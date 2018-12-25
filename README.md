@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # wechatapp-news-reader
 微信小程序 —— 新闻阅读器
 
@@ -17,3 +18,6 @@
 <img style="margin:10px" width="320" src="screenshots/demo4.png" alt="专题列表页面">
 <img style="margin:10px" width="320" src="screenshots/demo5.png" alt="详情页面">
 <img style="margin:10px" width="320" src="screenshots/demo6.png" alt="发现">
+=======
+# dzh-labs
+>>>>>>> c6aed222077d794b9a14bedcad70058b0827f289
